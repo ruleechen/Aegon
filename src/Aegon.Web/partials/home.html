@@ -1,0 +1,10 @@
+﻿<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">Products</h1>
+    </div>
+</div>
+<div ng-repeat="p in products">
+    <a ng-click="go('/product/' + p.id)">
+        <img ng-src="{{p.logo}}" title="{{p.title}}" />
+    </a>
+</div>
