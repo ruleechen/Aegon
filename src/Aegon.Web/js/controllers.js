@@ -21,7 +21,11 @@ angular.module('Aegon.controllers', [])
     .controller('HomeCtrl', ['$scope', 'Products', function ($scope, Products) {
         $scope.products = Products.query();
     }])
-    .controller('ProductCtrl', ['$scope', '$routeParams', 'Products', function ($scope, $routeParams, Products) {
+    .controller('ProductCtrl', ['$scope', '$routeParams', 'Products', 'Users', function ($scope, $routeParams, Products, Users) {
         $scope.product = Products.get($routeParams.productId);
+        $scope.user = Users.lastOrDefault();
+        $scope.submit = function () {
+            Users.store(this.user);
+        };
     }]);
 

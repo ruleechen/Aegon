@@ -1,0 +1,145 @@
+/*
+[Contents]
+
+	0- Global
+	1- Header
+	2- Main
+*/
+
+/* =0 Global
+---------------------------------------------------------------------------------------------------------------------*/
+body{
+	font:13px/1.2 Arial, Helvetica, sans-serif;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+#body-container{
+	margin:0 auto;
+	padding:3%;
+	width:94%;
+}
+
+/* =1 Header
+---------------------------------------------------------------------------------------------------------------------*/
+#header .toggle{
+	float:right;
+}
+#header .toggle img{
+	display:block;
+	height:20px;
+	width:30px;
+}
+#header h1{
+	font-size:32px;
+}
+#header h2{
+	font-size:24px;
+}
+#header .arrow{
+	float:right;
+}
+
+/* =2 Main
+---------------------------------------------------------------------------------------------------------------------*/
+/* Image list
+---------------------------------------------------------*/
+.block.image-list{
+	font-size:24px;
+	font-weight:bold;
+	padding:10%;
+}
+.block.image-list ul{
+	overflow:hidden;
+}
+.block.image-list li{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	float:left;
+	margin-bottom:4%;
+	width:48%;
+}
+.block.image-list li:nth-child(2n){
+	margin-left:4%;
+}
+.block.image-list img{
+	display:block;
+	width:100%;
+}
+/* Form
+---------------------------------------------------------*/
+.block.form .title{
+	font-size:24px;
+	margin-bottom:20px;
+	text-align:center;
+}
+.block.form .field{
+	margin-bottom:10px;
+}
+.block.form .field.with-checkbox{
+	padding-right:20px;
+	position:relative;
+}
+.block.form label{
+	display:block;
+	margin-bottom:3px;
+}
+.block.form .field.with-checkbox input[type="checkbox"]{
+	position:absolute;
+	right:0;
+	top:18px;
+}
+.block.form .field input[type="text"],
+.block.form .field input[type="email"]{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	height:24px;
+	padding:4px;
+	width:100%;
+}
+.block.form textarea{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	height:100px;
+	width:100%;
+}
+.block.form .buttons button{
+	float:right;
+	height:25px;
+	margin-left:10px;
+	min-width:80px;
+}
+.block.form .buttons .title{
+	font-size:24px;
+	line-height:1;
+	text-align:right;
+}
+.block.form .links{
+	border:1px solid #000;
+	width:100%;
+}
+.block.form .links td{
+	border:1px solid #000;
+}
+.block.form .links a{
+	color:#000;
+	display:block;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+}

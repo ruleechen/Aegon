@@ -1,10 +1,46 @@
-﻿<div class="topcoat-navigation-bar">
-    <div class="topcoat-navigation-bar__item center full">
-        <h1 class="topcoat-navigation-bar__title">Products</h1>
+﻿<header id="header" class="clearfix">
+    <h1 class="text-center">Askkelly.com</h1>
+    <h2 class="text-center">Get your free quote!</h2>
+</header>
+<section id="main">
+    <div class="block image-list">
+        <ul>
+            <li ng-repeat="p in products"><a href="" ng-click="go('/product/' + p.id)">
+                <img ng-src="{{p.logo}}" alt="{{p.title}}" /></a></li>
+        </ul>
     </div>
-</div>
-<div ng-repeat="p in products">
-    <a ng-click="go('/product/' + p.id)">
-        <img ng-src="{{p.logo}}" title="{{p.title}}" />
-    </a>
-</div>
+    <div class="block form">
+        <h3 class="title">See below who Kelly really is...</h3>
+        <p class="field">
+            <textarea>USP 1: 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+				</textarea>
+        </p>
+        <p class="field">
+            <textarea>USP 2: 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+				</textarea>
+        </p>
+        <p class="field">
+            <textarea>USP 3: 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+					Lorum ipsum Lorum Ipsum 
+				</textarea>
+        </p>
+        <table class="links">
+            <tr>
+                <td><a href="#">Link1</a></td>
+                <td><a href="#">Link1</a></td>
+                <td><a href="#">Link1</a></td>
+            </tr>
+        </table>
+    </div>
+</section>
