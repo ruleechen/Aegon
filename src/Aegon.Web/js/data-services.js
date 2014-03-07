@@ -145,9 +145,9 @@
                     return findBy(suppliers, 'id', parseInt(id, 10));
                 }
             },
-            clauses: function () {
+            clauses: function (ss) {
                 var obj = {};
-                angular.forEach(suppliers, function (s) {
+                angular.forEach(ss, function (s) {
                     angular.forEach(s.products, function (p) {
                         angular.forEach(p.clauses, function (v, k) {
                             obj[k] = true;
