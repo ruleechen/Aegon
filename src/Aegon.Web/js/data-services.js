@@ -116,22 +116,23 @@
 
     services.factory('Suppliers', [function () {
         return {
-            query: function (productId) {
-                if (angular.isString(productId)) {
-                    var product = findBy(products, 'id', parseInt(productId, 10));
-                    var ret = [];
+            query: function (productName) {
+                var ret = suppliers;
+                if (angular.isString(productName)) {
+                    ret = [];
                     angular.forEach(suppliers, function (s) {
                         angular.forEach(s.products, function (p) {
-                            if (p.name == product.name) {
+                            if (p.name === productName) {
                                 ret.push(s);
                                 return false;
                             }
                         });
                     });
-                    return ret;
-                } else {
-                    return suppliers;
                 }
+                angular.forEach(ret, function (it) {
+                    delete it.check;
+                });
+                return ret;
             },
             get: function (id) {
                 if (angular.isArray(id)) {

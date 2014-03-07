@@ -42,8 +42,9 @@
     //#endregion
 
     //#region suppliers
-    ctrls.controller('SuppliersCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
-        $scope.suppliers = Suppliers.query($routeParams.productId);
+    ctrls.controller('SuppliersCtrl', ['$scope', '$rootScope', '$routeParams', 'Products', 'Suppliers', function ($scope, $rootScope, $routeParams, Products, Suppliers) {
+        var productName = Products.get($routeParams.productId).name;
+        $scope.suppliers = Suppliers.query(productName);
         $scope.redirect = function () {
             $rootScope.go(this.supplier.link);
         };
