@@ -79,11 +79,11 @@
     //#region Suppliers
 
     var suppliers = [
-        { id: 1, company: 'Company A', price: '€84', products: 'CarInsurance', link: '/redirected' },
-        { id: 2, company: 'Company B', price: '€85', products: 'CarInsurance,AirInsurance', link: '/redirected' },
-        { id: 3, company: 'Company C', price: '€86', products: 'CarInsurance,AirInsurance,TravelInsurance', link: '/redirected' },
-        { id: 4, company: 'Company D', price: '€87', products: 'CarInsurance,AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' },
-        { id: 5, company: 'Company E', price: '€88', products: 'AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' }
+        { id: 1, company: 'Company A', price: '€84', coverage: '€1004', products: 'CarInsurance', link: '/redirected' },
+        { id: 2, company: 'Company B', price: '€85', coverage: '€1005', products: 'CarInsurance,AirInsurance', link: '/redirected' },
+        { id: 3, company: 'Company C', price: '€86', coverage: '€1006', products: 'CarInsurance,AirInsurance,TravelInsurance', link: '/redirected' },
+        { id: 4, company: 'Company D', price: '€87', coverage: '€1007', products: 'CarInsurance,AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' },
+        { id: 5, company: 'Company E', price: '€88', coverage: '€1008', products: 'AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' }
     ];
 
     services.factory('Suppliers', [function () {
@@ -117,6 +117,22 @@
         };
     }]);
 
+    //#endregion
+
+    //#region clauses
+    var clauses = [
+        { id: 1, name: 'X' },
+        { id: 2, name: 'Y' },
+        { id: 3, name: 'Z' }
+    ];
+
+    services.factory('Clauses', [function () {
+        return {
+            query: function () {
+                return clauses;
+            }
+        };
+    }]);
     //#endregion
 
 }());

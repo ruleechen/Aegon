@@ -81,9 +81,10 @@
     //#endregion
 
     //#region compare
-    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
+    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', 'Clauses', function ($scope, $rootScope, $routeParams, Suppliers, Clauses) {
         var ids = $routeParams.supplierIds.split('-');
         $scope.suppliers = Suppliers.get(ids);
+        $scope.clauses = Clauses.query();
     }]);
     //#endregion
 

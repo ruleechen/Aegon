@@ -1,6 +1,6 @@
 ﻿<header id="header" class="clearfix">
     <a class="toggle" href="javascript:;" ng-click="back()">
-        <img src="images/toggle.png" alt="Toggle"></a>
+        <img src="images/toggle.png" alt="Toggle" /></a>
     <h1>Undecisive?</h1>
 </header>
 <section id="main">
@@ -21,29 +21,16 @@
                     </tr>
                     <tr>
                         <th>Coverage</th>
-                        <td>€1000</td>
-                        <td>€1200</td>
+                        <td ng-repeat="s in suppliers">{{s.coverage}}</td>
                     </tr>
-                    <tr>
-                        <th>X</th>
-                        <td><span class="status">
-                            <img src="images/tick.png" alt="support"></span></td>
-                        <td><span class="status">
-                            <img src="images/tick.png" alt="support"></span></td>
-                    </tr>
-                    <tr>
-                        <th>Y</th>
-                        <td><span class="status">
-                            <img src="images/tick.png" alt="support"></span></td>
-                        <td><span class="status">
-                            <img src="images/cross.png" alt="not support"></span></td>
-                    </tr>
-                    <tr>
-                        <th>Z</th>
-                        <td><span class="status">
-                            <img src="images/cross.png" alt="not support"></span></td>
-                        <td><span class="status">
-                            <img src="images/cross.png" alt="not support"></span></td>
+                    <tr ng-repeat="c in clauses">
+                        <th>{{c.name}}</th>
+                        <td ng-repeat="s in suppliers">
+                            <span class="status">
+                                <img src="images/tick.png" alt="support" />
+                                <img src="images/cross.png" alt="not support" />
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
