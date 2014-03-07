@@ -47,9 +47,43 @@
         $scope.redirect = function () {
             $rootScope.go(this.supplier.link);
         };
-        $scope.submit = function () {
-
+        var enabledCheck = false;
+        var getSelected = function (suppliers) {
+            var ids = [];
+            for (var i = 0; i < suppliers.length; i++) {
+                if (suppliers[i].check) {
+                    ids.push(suppliers[i].id);
+                }
+            }
+            return ids;
         };
+        $scope.change = function () {
+            if (!enabledCheck) {
+                return;
+            }
+            var ids = getSelected(this.suppliers);
+            if (ids.length === 0) {
+                $scope.errors = true;
+            } else {
+                $scope.errors = false;
+            }
+        };
+        $scope.submit = function () {
+            enabledCheck = true;
+            var ids = getSelected(this.suppliers);
+            if (ids.length === 0) {
+                $scope.errors = true;
+            } else {
+                $rootScope.go('/compare/' + ids.join('-'));
+            }
+        };
+    }]);
+    //#endregion
+
+    //#region compare
+    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
+        var ids = $routeParams.supplierIds;
+        debugger;
     }]);
     //#endregion
 

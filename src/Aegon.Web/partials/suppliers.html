@@ -18,7 +18,7 @@
                 <tbody>
                     <tr ng-repeat="supplier in suppliers">
                         <td>
-                            <input type="checkbox" />
+                            <input type="checkbox" ng-model="supplier.check" ng-change="change()" />
                             <span>{{supplier.company}}</span>
                         </td>
                         <td>
@@ -28,6 +28,9 @@
                 </tbody>
             </table>
             <button type="submit">Compare multiple</button>
+            <div>
+                <span ng-show="errors" class="ng-hide error">Please select suppliers.</span>
+            </div>
         </form>
     </div>
 </section>
