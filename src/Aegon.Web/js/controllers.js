@@ -36,7 +36,7 @@
         $scope.user = Users.lastOrDefault();
         $scope.submit = function () {
             Users.store(this.user);
-            $rootScope.go('/suppliers/' + $routeParams.productId + '/' + this.user.id);
+            $rootScope.go('/suppliers/' + $routeParams.productId);
         };
     }]);
     //#endregion

@@ -31,6 +31,10 @@ body{
 	width:94%;
 }
 
+input{
+    vertical-align: middle;
+}
+
 /* =1 Header
 ---------------------------------------------------------------------------------------------------------------------*/
 #header .toggle{
@@ -53,6 +57,10 @@ body{
 
 /* =2 Main
 ---------------------------------------------------------------------------------------------------------------------*/
+#main > h2.title{
+    font-size: 24px;
+    margin: 12px 0;
+}
 /* Image list
 ---------------------------------------------------------*/
 .block.image-list{
@@ -142,4 +150,56 @@ body{
 	line-height:30px;
 	text-align:center;
 	text-decoration:none;
+}
+.block.form .table{
+    margin: 20px 0;
+}
+.block.form .table table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 30px;
+}
+.block.form .table table th,
+.block.form .table table td{
+    text-align: center;
+    border: 1px solid #000;
+    font-weight: normal;
+}
+.block.form .table table label{
+    display: inline;
+}
+
+.block.form .buttons-group{
+    word-space: 0;
+    font-size: 0;
+    border: 1px solid #000;
+}
+.block.form .buttons-group a{
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-right: 1px solid #000;
+}
+.block.form .buttons-group a:last-child{
+    border-right: 0;
+}
+.block.form .buttons-group.items3 a{
+    width: 33%;
+}
+
+/* Others
+---------------------------------------------------------*/
+.tips{
+    margin: 20px 0;
+}
+.status{
+    display: inline-block;
+}
+.status img{
+    width: 28px;
+    height: 20px;
+    vertical-align: middle;
 }

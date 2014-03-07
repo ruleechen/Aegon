@@ -2,33 +2,32 @@
     <a class="toggle" href="javascript:;" ng-click="back()">
         <img src="images/toggle.png" alt="Toggle"></a>
     <h1>Kelly got it!</h1>
-    <p style="margin-top: 20px; margin-bottom: 20px;">Simply click a price to get redirected or check multiple to compare.</p>
 </header>
-<section id="main">
+<section id="Section">
+    <p class="tips">Simply click a price to get redirected or check multiple to compare.</p>
+    <h2 class="title">Our results:</h2>
     <div class="block form">
-        <h2 class="title" style="text-align: left;">Our results:</h2>
         <form name="suppliersForm" ng-submit="submit()">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Company</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="supplier in suppliers">
-                        <td>
-                            <input type="checkbox" ng-model="supplier.check" ng-change="change()" />
-                            <span>{{supplier.company}}</span>
-                        </td>
-                        <td>
-                            <a href="javascript:;" ng-click="redirect()">{{supplier.price}}</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="submit">Compare multiple</button>
-            <div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="supplier in suppliers">
+                            <td>
+                                <input type="checkbox" id="supplier{{supplier.id}}" ng-model="supplier.check" ng-change="change()" />&nbsp;&nbsp;<label for="supplier{{supplier.id}}">{{supplier.company}}</label>
+                            </td>
+                            <td><a href="javascript:;" ng-click="redirect()">{{supplier.price}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <button type="submit">Compare multiple</button>
                 <span ng-show="errors" class="ng-hide error">Please select suppliers.</span>
             </div>
         </form>
