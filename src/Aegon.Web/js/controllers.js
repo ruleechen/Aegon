@@ -81,10 +81,10 @@
     //#endregion
 
     //#region compare
-    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', 'Clauses', function ($scope, $rootScope, $routeParams, Suppliers, Clauses) {
+    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
         var ids = $routeParams.supplierIds.split('-');
         $scope.suppliers = Suppliers.get(ids);
-        $scope.clauses = Clauses.query();
+        $scope.clauses = Suppliers.clauses();
     }]);
     //#endregion
 

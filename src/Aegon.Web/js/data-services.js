@@ -79,11 +79,39 @@
     //#region Suppliers
 
     var suppliers = [
-        { id: 1, company: 'Company A', price: '€84', coverage: '€1004', products: 'CarInsurance', link: '/redirected' },
-        { id: 2, company: 'Company B', price: '€85', coverage: '€1005', products: 'CarInsurance,AirInsurance', link: '/redirected' },
-        { id: 3, company: 'Company C', price: '€86', coverage: '€1006', products: 'CarInsurance,AirInsurance,TravelInsurance', link: '/redirected' },
-        { id: 4, company: 'Company D', price: '€87', coverage: '€1007', products: 'CarInsurance,AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' },
-        { id: 5, company: 'Company E', price: '€88', coverage: '€1008', products: 'AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' }
+        {
+            id: 1, company: 'Company A', price: '€84', coverage: '€1004', link: '/redirected', products: [
+                { name: 'CarInsurance', clauses: { A: true, Z: true } },
+                { name: 'HealthInsurance', clauses: { B: true } }
+            ]
+        },
+        {
+            id: 2, company: 'Company B', price: '€85', coverage: '€1005', link: '/redirected', products: [
+                { name: 'CarInsurance', clauses: { Y: true } },
+                { name: 'AirInsurance', clauses: { Y: true } }
+            ]
+        },
+        {
+            id: 3, company: 'Company C', price: '€86', coverage: '€1006', link: '/redirected', products: [
+                { name: 'CarInsurance', clauses: { A: true } },
+                { name: 'TravelInsurance', clauses: { C: true } }
+            ]
+        },
+        {
+            id: 4, company: 'Company D', price: '€87', coverage: '€1007', link: '/redirected', products: [
+                { name: 'CarInsurance', clauses: { B: true } },
+                { name: 'AirInsurance', clauses: { C: true } },
+                { name: 'HealthInsurance', clauses: { D: true } },
+                { name: 'TravelInsurance', clauses: { Z: true } }
+            ]
+        },
+        {
+            id: 5, company: 'Company E', price: '€88', coverage: '€1008', link: '/redirected', products: [
+                { name: 'AirInsurance', clauses: { B: true } },
+                { name: 'TravelInsurance', clauses: { C: true } },
+                { name: 'HealthInsurance', clauses: { Z: true } }
+            ]
+        }
     ];
 
     services.factory('Suppliers', [function () {
@@ -92,11 +120,14 @@
                 if (angular.isString(productId)) {
                     var product = findBy(products, 'id', parseInt(productId, 10));
                     var ret = [];
-                    for (var i = 0; i < suppliers.length; i++) {
-                        if (suppliers[i].products.indexOf(product.name) > -1) {
-                            ret.push(suppliers[i]);
-                        }
-                    }
+                    angular.forEach(suppliers, function (s) {
+                        angular.forEach(s.products, function (p) {
+                            if (p.name == product.name) {
+                                ret.push(s);
+                                return false;
+                            }
+                        });
+                    });
                     return ret;
                 } else {
                     return suppliers;
@@ -113,26 +144,25 @@
                 } else {
                     return findBy(suppliers, 'id', parseInt(id, 10));
                 }
+            },
+            clauses: function () {
+                var obj = {};
+                angular.forEach(suppliers, function (s) {
+                    angular.forEach(s.products, function (p) {
+                        angular.forEach(p.clauses, function (v, k) {
+                            obj[k] = true;
+                        });
+                    });
+                });
+                var ret = [];
+                angular.forEach(obj, function (v, k) {
+                    ret.push(k);
+                });
+                return ret;
             }
         };
     }]);
 
-    //#endregion
-
-    //#region clauses
-    var clauses = [
-        { id: 1, name: 'X' },
-        { id: 2, name: 'Y' },
-        { id: 3, name: 'Z' }
-    ];
-
-    services.factory('Clauses', [function () {
-        return {
-            query: function () {
-                return clauses;
-            }
-        };
-    }]);
     //#endregion
 
 }());
