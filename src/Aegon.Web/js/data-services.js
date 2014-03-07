@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 *   data-services.js
 *   author: ronglin
 *   create date: 2014.3.6
@@ -79,11 +79,11 @@
     //#region Suppliers
 
     var suppliers = [
-        { id: 1, company: 'Company A', price: '€84', products: 'CarInsurance', link: '/redirected' },
-        { id: 2, company: 'Company B', price: '€85', products: 'CarInsurance,AirInsurance', link: '/redirected' },
-        { id: 3, company: 'Company C', price: '€86', products: 'CarInsurance,AirInsurance,TravelInsurance', link: '/redirected' },
-        { id: 4, company: 'Company D', price: '€87', products: 'CarInsurance,AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' },
-        { id: 5, company: 'Company E', price: '€88', products: 'AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' }
+        { id: 1, company: 'Company A', price: 'â‚¬84', products: 'CarInsurance', link: '/redirected' },
+        { id: 2, company: 'Company B', price: 'â‚¬85', products: 'CarInsurance,AirInsurance', link: '/redirected' },
+        { id: 3, company: 'Company C', price: 'â‚¬86', products: 'CarInsurance,AirInsurance,TravelInsurance', link: '/redirected' },
+        { id: 4, company: 'Company D', price: 'â‚¬87', products: 'CarInsurance,AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' },
+        { id: 5, company: 'Company E', price: 'â‚¬88', products: 'AirInsurance,TravelInsurance,TravelInsurance', link: '/redirected' }
     ];
 
     services.factory('Suppliers', [function () {

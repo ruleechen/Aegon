@@ -5,7 +5,7 @@
 <section id="main">
     <div class="block image-list">
         <ul>
-            <li ng-repeat="p in products"><a href="" ng-click="go('/user/' + p.id)">
+            <li ng-repeat="p in products"><a href="javascript:;" ng-click="go('/user/' + p.id)">
                 <img ng-src="{{p.logo}}" alt="{{p.title}}" /></a></li>
         </ul>
     </div>
@@ -37,9 +37,9 @@
         </p>
         <table class="links">
             <tr>
-                <td><a href="javascript:;">Link1</a></td>
-                <td><a href="javascript:;">Link1</a></td>
-                <td><a href="javascript:;">Link1</a></td>
+                <td><a href="javascript:;" ng-click="go('/content')">Link1</a></td>
+                <td><a href="javascript:;" ng-click="go('/content')">Link1</a></td>
+                <td><a href="javascript:;" ng-click="go('/content')">Link1</a></td>
             </tr>
         </table>
     </div>

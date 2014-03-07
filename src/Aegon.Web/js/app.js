@@ -1,4 +1,4 @@
-/*
+﻿/*
 *   app.js
 *   author: ronglin
 *   create date: 2014.3.6
@@ -20,6 +20,7 @@
         $routeProvider.when('/home', { templateUrl: 'partials/home.html', controller: 'HomeCtrl' });
         $routeProvider.when('/user/:productId', { templateUrl: 'partials/user.html', controller: 'UserCtrl' });
         $routeProvider.when('/suppliers/:productId/:userId', { templateUrl: 'partials/suppliers.html', controller: 'SuppliersCtrl' });
+        $routeProvider.when('/content', { templateUrl: 'partials/content.html' });
         $routeProvider.when('/redirected', { templateUrl: 'partials/redirected.html' });
         $routeProvider.otherwise({ redirectTo: '/home' });
     }]);

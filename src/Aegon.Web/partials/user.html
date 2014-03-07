@@ -1,12 +1,12 @@
 ﻿<header id="header" class="clearfix">
-    <a class="toggle" href="" ng-click="back()">
+    <a class="toggle" href="javascript:;" ng-click="back()">
         <img src="images/toggle.png" alt="Toggle"></a>
     <h1>Your quote in 5 fields below.</h1>
     <img class="arrow" src="images/arrow.png" alt="Arrow">
 </header>
 <section id="main">
     <div class="block form">
-        <form name="userForm" ng-submit="submit('')">
+        <form name="userForm" ng-submit="submit()">
             <input type="hidden" name="id" ng-model="user.id" />
             <p class="field with-checkbox">
                 <label for="license">Whats your license plate?</label>

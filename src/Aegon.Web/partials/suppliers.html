@@ -1,10 +1,33 @@
 ﻿<header id="header" class="clearfix">
-    <a class="toggle" href="" ng-click="back()">
+    <a class="toggle" href="javascript:;" ng-click="back()">
         <img src="images/toggle.png" alt="Toggle"></a>
     <h1>Kelly got it!</h1>
-    <p>Simply click a price to get redirected or check multiple to compare.</p>
+    <p style="margin-top: 20px; margin-bottom: 20px;">Simply click a price to get redirected or check multiple to compare.</p>
 </header>
 <section id="main">
     <div class="block form">
+        <h2 class="title" style="text-align: left;">Our results:</h2>
+        <form name="suppliersForm" ng-submit="submit()">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="supplier in suppliers">
+                        <td>
+                            <input type="checkbox" />
+                            <span>{{supplier.company}}</span>
+                        </td>
+                        <td>
+                            <a href="javascript:;" ng-click="redirect()">{{supplier.price}}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Compare multiple</button>
+        </form>
     </div>
 </section>

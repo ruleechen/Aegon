@@ -1,4 +1,4 @@
-/*
+﻿/*
 *   controllers.js
 *   author: ronglin
 *   create date: 2014.3.6
@@ -44,6 +44,12 @@
     //#region suppliers
     ctrls.controller('SuppliersCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
         $scope.suppliers = Suppliers.query($routeParams.productId);
+        $scope.redirect = function () {
+            $rootScope.go(this.supplier.link);
+        };
+        $scope.submit = function () {
+
+        };
     }]);
     //#endregion
 
