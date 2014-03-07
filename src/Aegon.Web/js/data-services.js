@@ -89,7 +89,7 @@
     services.factory('Suppliers', [function () {
         return {
             query: function (productId) {
-                if (productId) {
+                if (angular.isString(productId)) {
                     var product = findBy(products, 'id', parseInt(productId, 10));
                     var ret = [];
                     for (var i = 0; i < suppliers.length; i++) {
@@ -103,7 +103,16 @@
                 }
             },
             get: function (id) {
-                return findBy(suppliers, 'id', parseInt(id, 10));
+                if (angular.isArray(id)) {
+                    var ret = [];
+                    angular.forEach(id, function (i) {
+                        var s = findBy(suppliers, 'id', parseInt(i, 10));
+                        if (s) { ret.push(s); }
+                    });
+                    return ret;
+                } else {
+                    return findBy(suppliers, 'id', parseInt(id, 10));
+                }
             }
         };
     }]);

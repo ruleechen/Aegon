@@ -1,1 +1,58 @@
-﻿
+﻿<header id="header" class="clearfix">
+    <a class="toggle" href="javascript:;" ng-click="back()">
+        <img src="images/toggle.png" alt="Toggle"></a>
+    <h1>Undecisive?</h1>
+</header>
+<section id="main">
+    <h2 class="title">Compare can you, says Master Yoda</h2>
+    <div class="block form">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th ng-repeat="s in suppliers">{{s.company}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Price</th>
+                        <th ng-repeat="s in suppliers">{{s.price}}</th>
+                    </tr>
+                    <tr>
+                        <th>Coverage</th>
+                        <td>€1000</td>
+                        <td>€1200</td>
+                    </tr>
+                    <tr>
+                        <th>X</th>
+                        <td><span class="status">
+                            <img src="images/tick.png" alt="support"></span></td>
+                        <td><span class="status">
+                            <img src="images/tick.png" alt="support"></span></td>
+                    </tr>
+                    <tr>
+                        <th>Y</th>
+                        <td><span class="status">
+                            <img src="images/tick.png" alt="support"></span></td>
+                        <td><span class="status">
+                            <img src="images/cross.png" alt="not support"></span></td>
+                    </tr>
+                    <tr>
+                        <th>Z</th>
+                        <td><span class="status">
+                            <img src="images/cross.png" alt="not support"></span></td>
+                        <td><span class="status">
+                            <img src="images/cross.png" alt="not support"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="tips">Just click on the name of the insurer to get redirected by Kelly.</p>
+        <div class="buttons-group items3">
+            <a href="javascript:;" ng-click="go('/content')">Link1</a>
+            <a href="javascript:;" ng-click="go('/content')">Link2</a>
+            <a href="javascript:;" ng-click="go('/content')">Link3</a>
+        </div>
+    </div>
+</section>

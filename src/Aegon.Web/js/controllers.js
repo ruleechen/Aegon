@@ -82,8 +82,8 @@
 
     //#region compare
     ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
-        var ids = $routeParams.supplierIds;
-        debugger;
+        var ids = $routeParams.supplierIds.split('-');
+        $scope.suppliers = Suppliers.get(ids);
     }]);
     //#endregion
 
