@@ -31,12 +31,19 @@
     //#endregion
 
     //#region product
-    ctrls.controller('ProductCtrl', ['$scope', '$routeParams', 'Products', 'Users', function ($scope, $routeParams, Products, Users) {
+    ctrls.controller('UserCtrl', ['$scope', '$rootScope', '$routeParams', 'Products', 'Users', function ($scope, $rootScope, $routeParams, Products, Users) {
         $scope.product = Products.get($routeParams.productId);
         $scope.user = Users.lastOrDefault();
         $scope.submit = function () {
             Users.store(this.user);
+            $rootScope.go('/suppliers/' + $routeParams.productId + '/' + this.user.id);
         };
+    }]);
+    //#endregion
+
+    //#region suppliers
+    ctrls.controller('SuppliersCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
+        $scope.suppliers = Suppliers.query($routeParams.productId);
     }]);
     //#endregion
 

@@ -1,0 +1,42 @@
+﻿<header id="header" class="clearfix">
+    <a class="toggle" href="" ng-click="back()">
+        <img src="images/toggle.png" alt="Toggle"></a>
+    <h1>Your quote in 5 fields below.</h1>
+    <img class="arrow" src="images/arrow.png" alt="Arrow">
+</header>
+<section id="main">
+    <div class="block form">
+        <form name="userForm" ng-submit="submit('')">
+            <input type="hidden" name="id" ng-model="user.id" />
+            <p class="field with-checkbox">
+                <label for="license">Whats your license plate?</label>
+                <input type="text" name="name" ng-model="user.name" required />
+                <input type="checkbox" name="nameCheck" ng-model="user.nameCheck" />
+            </p>
+            <p class="field with-checkbox">
+                <label for="age">Tell us your age:</label>
+                <input type="text" name="age" ng-model="user.age" />
+                <input type="checkbox" name="ageCheck" ng-model="user.ageCheck" />
+            </p>
+            <p class="field with-checkbox">
+                <label for="age">Where do you live?</label>
+                <input type="text" name="address" ng-model="user.address" />
+                <input type="checkbox" name="addressCheck" ng-model="user.addressCheck" />
+            </p>
+            <p class="field with-checkbox">
+                <label for="age">Years of free claim?</label>
+                <input type="text" name="years" ng-model="user.years" />
+                <input type="checkbox" name="yearsCheck" ng-model="user.yearsCheck" />
+            </p>
+            <p class="field with-checkbox">
+                <label for="age">Oh and whats your email?</label>
+                <input type="email" name="email" ng-model="user.email" required />
+                <input type="checkbox" name="emailCheck" ng-model="user.emailCheck" />
+            </p>
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <h2 class="title">Get it now &gt;</h2>
+            </div>
+        </form>
+    </div>
+</section>
