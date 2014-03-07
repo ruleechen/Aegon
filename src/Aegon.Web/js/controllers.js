@@ -74,17 +74,19 @@
             if (ids.length === 0) {
                 $scope.errors = true;
             } else {
-                $rootScope.go('/compare/' + ids.join('-'));
+                $rootScope.go('/compare/' + $routeParams.productId + '/' + ids.join('-'));
             }
         };
     }]);
     //#endregion
 
     //#region compare
-    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Suppliers', function ($scope, $rootScope, $routeParams, Suppliers) {
+    ctrls.controller('CompareCtrl', ['$scope', '$rootScope', '$routeParams', 'Products', 'Suppliers', function ($scope, $rootScope, $routeParams, Products, Suppliers) {
         var ids = $routeParams.supplierIds.split('-');
         $scope.suppliers = Suppliers.get(ids);
-        $scope.clauses = Suppliers.clauses($scope.suppliers);
+        $scope.productName = Products.get($routeParams.productId).name;
+        $scope.clauses = Suppliers.clauses($scope.suppliers, $scope.productName);
+        $scope.supports = Suppliers.supports($scope.suppliers, $scope.clauses, $scope.productName);
     }]);
     //#endregion
 

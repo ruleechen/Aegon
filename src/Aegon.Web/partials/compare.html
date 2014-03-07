@@ -27,8 +27,8 @@
                         <th>{{c}}</th>
                         <td ng-repeat="s in suppliers">
                             <span class="status">
-                                <img src="images/tick.png" alt="support" />
-                                <img src="images/cross.png" alt="not support" />
+                                <img src="images/tick.png" alt="support" ng-show="supports[s.id][c]" />
+                                <img src="images/cross.png" alt="not support" ng-hide="supports[s.id][c]" />
                             </span>
                         </td>
                     </tr>

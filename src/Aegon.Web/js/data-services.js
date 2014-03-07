@@ -145,18 +145,34 @@
                     return findBy(suppliers, 'id', parseInt(id, 10));
                 }
             },
-            clauses: function (ss) {
+            clauses: function (ss, productName) {
                 var obj = {};
                 angular.forEach(ss, function (s) {
                     angular.forEach(s.products, function (p) {
-                        angular.forEach(p.clauses, function (v, k) {
-                            obj[k] = true;
-                        });
+                        if (p.name === productName) {
+                            angular.forEach(p.clauses, function (v, k) {
+                                obj[k] = true;
+                            });
+                        }
                     });
                 });
                 var ret = [];
                 angular.forEach(obj, function (v, k) {
                     ret.push(k);
+                });
+                return ret;
+            },
+            supports: function (ss, clauseTypes, productName) {
+                var ret = {};
+                angular.forEach(ss, function (s) {
+                    ret[s.id] = {};
+                    angular.forEach(s.products, function (p) {
+                        if (p.name === productName) {
+                            angular.forEach(clauseTypes, function (c) {
+                                ret[s.id][c] = p.clauses[c];
+                            });
+                        }
+                    });
                 });
                 return ret;
             }
