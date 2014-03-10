@@ -81,35 +81,35 @@
     var suppliers = [
         {
             id: 1, company: 'Company A', price: '€84', coverage: '€1004', link: '/redirected', products: [
-                { name: 'CarInsurance', clauses: { A: true, Z: true } },
-                { name: 'HealthInsurance', clauses: { B: true } }
+                { name: 'CarInsurance', clauses: { A: true, G: true, Z: true } },
+                { name: 'HealthInsurance', clauses: { B: true, U: true } }
             ]
         },
         {
             id: 2, company: 'Company B', price: '€85', coverage: '€1005', link: '/redirected', products: [
-                { name: 'CarInsurance', clauses: { Y: true } },
-                { name: 'AirInsurance', clauses: { Y: true } }
+                { name: 'CarInsurance', clauses: { Y: true, R: true, M: true } },
+                { name: 'AirInsurance', clauses: { Y: true, O: true, P: true } }
             ]
         },
         {
             id: 3, company: 'Company C', price: '€86', coverage: '€1006', link: '/redirected', products: [
-                { name: 'CarInsurance', clauses: { A: true } },
-                { name: 'TravelInsurance', clauses: { C: true } }
+                { name: 'CarInsurance', clauses: { A: true, G: true, S: true } },
+                { name: 'TravelInsurance', clauses: { C: true, E: true } }
             ]
         },
         {
             id: 4, company: 'Company D', price: '€87', coverage: '€1007', link: '/redirected', products: [
-                { name: 'CarInsurance', clauses: { B: true } },
-                { name: 'AirInsurance', clauses: { C: true } },
-                { name: 'HealthInsurance', clauses: { D: true } },
-                { name: 'TravelInsurance', clauses: { Z: true } }
+                { name: 'CarInsurance', clauses: { B: true, Q: true, M: true } },
+                { name: 'AirInsurance', clauses: { C: true, N: true, V: true } },
+                { name: 'HealthInsurance', clauses: { D: true, L: true } },
+                { name: 'TravelInsurance', clauses: { Z: true, K: true } }
             ]
         },
         {
             id: 5, company: 'Company E', price: '€88', coverage: '€1008', link: '/redirected', products: [
-                { name: 'AirInsurance', clauses: { B: true } },
-                { name: 'TravelInsurance', clauses: { C: true } },
-                { name: 'HealthInsurance', clauses: { Z: true } }
+                { name: 'AirInsurance', clauses: { B: true, X: true } },
+                { name: 'TravelInsurance', clauses: { C: true, F: true, G: true } },
+                { name: 'HealthInsurance', clauses: { Z: true, H: true } }
             ]
         }
     ];
