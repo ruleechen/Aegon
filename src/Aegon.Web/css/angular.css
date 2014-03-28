@@ -1,0 +1,13 @@
+﻿/*
+*   angular.css
+*   author: ronglin
+*   create date: 2014.3.6
+*/
+
+.ng-hide {
+    display: none !important;
+}
+
+.error {
+    color: red;
+}
