@@ -6,6 +6,12 @@
 
 'use strict';
 
+require('./lib/angular.min');
+require('./lib/angular-touch.min');
+require('./lib/angular-resource.min');
+require('./lib/angular-animate.min');
+require('./lib/angular-route.min');
+
 var controllers = require('./controllers');
 var dataServices = require('./dataServices');
 
