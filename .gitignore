@@ -56,11 +56,9 @@ ResolveAssemblyReference.cache
 *.force
 *.user
 *.csproj.user
+LastActions.xml
 packages/
 WebEvents/
 Versions/
 I18N/
-LastActions.xml
-Pinnacle.Web/Cms_Data/ImageCaching/
-Pinnacle.Web/Cms_Data/Account/Users/admin.config
-Documents/Requirements/~$*.docx
+node_modules/

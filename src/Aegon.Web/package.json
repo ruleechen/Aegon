@@ -1,0 +1,25 @@
+{
+  "name": "aegon.mobile",
+  "version": "0.0.0",
+  "description": "the test project of aegon mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ronglin-kooboo/Aegon.git"
+  },
+  "keywords": [
+    "mobile"
+  ],
+  "author": "ronglin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ronglin-kooboo/Aegon/issues"
+  },
+  "homepage": "https://github.com/Ronglin-kooboo/Aegon",
+  "devDependencies": {
+    "gulp": "~3.6.0"
+  }
+}
