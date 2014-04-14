@@ -1,0 +1,347 @@
+/**
+ * Sitekin CSS Framework
+ *
+ * Version 1.1
+ *
+ * Core reset stylesheet
+ *
+ * Don't make any changes in this file!
+ *
+ * @copyright       Copyright 2011
+ */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+:focus {
+  outline: 0;
+}
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+/* Remove special stylesheet in firefox */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/*
+[Contents]
+
+	0- Global
+	1- Header
+	2- Main
+*/
+/* =0 Global
+---------------------------------------------------------------------------------------------------------------------*/
+body {
+  font: 13px/1.2 Arial, Helvetica, sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+#body-container {
+  margin: 0 auto;
+  padding: 3%;
+  width: 94%;
+}
+input {
+  vertical-align: middle;
+}
+/* =1 Header
+---------------------------------------------------------------------------------------------------------------------*/
+#header .toggle {
+  float: right;
+}
+#header .toggle img {
+  display: block;
+  height: 20px;
+  width: 30px;
+}
+#header h1 {
+  font-size: 32px;
+}
+#header h2 {
+  font-size: 24px;
+}
+#header .arrow {
+  float: right;
+}
+/* =2 Main
+---------------------------------------------------------------------------------------------------------------------*/
+#main > h2.title {
+  font-size: 24px;
+  margin: 12px 0;
+}
+/* Image list
+---------------------------------------------------------*/
+.block.image-list {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10%;
+}
+.block.image-list ul {
+  overflow: hidden;
+}
+.block.image-list li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 4%;
+  width: 48%;
+}
+.block.image-list li:nth-child(2n) {
+  margin-left: 4%;
+}
+.block.image-list img {
+  display: block;
+  width: 100%;
+}
+/* Form
+---------------------------------------------------------*/
+.block.form .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.block.form .field {
+  margin-bottom: 10px;
+}
+.block.form .field.with-checkbox {
+  padding-right: 20px;
+  position: relative;
+}
+.block.form label {
+  display: block;
+  margin-bottom: 3px;
+}
+.block.form .field.with-checkbox input[type="checkbox"] {
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+.block.form .field input[type="text"],
+.block.form .field input[type="email"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 4px;
+  width: 100%;
+}
+.block.form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+}
+.block.form .buttons button {
+  float: right;
+  height: 25px;
+  margin-left: 10px;
+  min-width: 80px;
+}
+.block.form .buttons .title {
+  font-size: 24px;
+  line-height: 1;
+  text-align: right;
+}
+.block.form .links {
+  border: 1px solid #000;
+  width: 100%;
+}
+.block.form .links td {
+  border: 1px solid #000;
+}
+.block.form .links a {
+  color: #000;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+.block.form .table {
+  margin: 20px 0;
+}
+.block.form .table table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 30px;
+}
+.block.form .table table th,
+.block.form .table table td {
+  text-align: center;
+  border: 1px solid #000;
+  font-weight: normal;
+}
+.block.form .table table label {
+  display: inline;
+}
+.block.form .buttons-group {
+  word-space: 0;
+  font-size: 0;
+  border: 1px solid #000;
+}
+.block.form .buttons-group a {
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+  text-decoration: none;
+  border-right: 1px solid #000;
+}
+.block.form .buttons-group a:last-child {
+  border-right: 0;
+}
+.block.form .buttons-group.items3 a {
+  width: 33%;
+}
+/* Others
+---------------------------------------------------------*/
+.tips {
+  margin: 20px 0;
+}
+.status {
+  display: inline-block;
+}
+.status img {
+  width: 28px;
+  height: 20px;
+  vertical-align: middle;
+}
+/*
+*   slide.css
+*   author: ronglin
+*   create date: 2014.3.6
+*/
+.slide-left.ng-enter,
+.slide-left.ng-leave,
+.slide-right.ng-enter,
+.slide-right.ng-leave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  -ms-transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.slide-left.ng-enter {
+  z-index: 101;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.slide-left.ng-enter.ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-left.ng-leave {
+  z-index: 100;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-left.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.slide-right.ng-enter {
+  z-index: 100;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.slide-right.ng-enter.ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-right.ng-leave {
+  z-index: 101;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-right.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/*
+*   angular.css
+*   author: ronglin
+*   create date: 2014.3.6
+*/
+.ng-hide {
+  display: none !important;
+}
+.error {
+  color: red;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22E%3A%2FProjects%2FAegon%2Fsrc%2FAegon.Web%2Fcss%2Freset.css%22%2C%22E%3A%2FProjects%2FAegon%2Fsrc%2FAegon.Web%2Fcss%2Fmain.css%22%2C%22E%3A%2FProjects%2FAegon%2Fsrc%2FAegon.Web%2Fcss%2Fslide.css%22%2C%22css%2Fangular.css%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAYA%3BAAAM%3BAAAK%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAC%2FB%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAK%3BAAC7B%3BAAAM%3BAAAU%3BAAAQ%3BAAAO%3BAAC%2FB%3BAAAU%3BAAAG%3BAAAY%3BAAAI%3BEAC5B%2CSAAA%3BEACA%2CUAAA%3B%3BAAGD%3BAAAS%3BAAAO%3BAAAS%3BAAAY%3BAACrC%3BAAAQ%3BAAAQ%3BAAAQ%3BAAAM%3BAAAK%3BEAClC%2CcAAA%3B%3BAAGD%3BEACC%2CyBAAA%3BEACA%2CiBAAA%3B%3BAAGD%3BAAAU%3BEACT%2CSAAA%3B%3BAAGD%3BEACC%2CgBAAA%3B%3BAAGD%3BEACC%2CUAAA%3B%3B%3B%3BAAID%3BAAAO%3BAAAQ%3BAAAU%3BEACxB%2CgBAAA%3B%3B%3BAAGA%2CMAAM%3BAACN%2CKAAK%2CcAAc%3BAACnB%2CKAAK%2CeAAe%3BAACpB%2CKAAK%2CeAAe%3BAACpB%2CKAAK%2CaAAc%2CQAAO%2CeAAe%3BEACxC%2CYAAA%3BEACA%2CUAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAC3CF%3BEACC%2C2CAAA%3B%3BAAGD%3BEACC%2CkBAAA%3B%3BAAGD%2CSAAS%3BEACR%2CWAAA%3BEACA%2CSAAS%2CGAAT%3BEACA%2CcAAA%3BEACA%2CYAAA%3BEACA%2CSAAA%3BEACA%2CkBAAA%3B%3BAAGD%3BEACC%2CcAAA%3BEACA%2CWAAA%3BEACA%2CUAAA%3B%3BAAGD%3BEACI%2CsBAAA%3B%3B%3B%3BAAKJ%2COAAQ%3BEACP%2CYAAA%3B%3BAAED%2COAAQ%2CQAAQ%3BEACf%2CcAAA%3BEACA%2CYAAA%3BEACA%2CWAAA%3B%3BAAED%2COAAQ%3BEACP%2CeAAA%3B%3BAAED%2COAAQ%3BEACP%2CeAAA%3B%3BAAED%2COAAQ%3BEACP%2CYAAA%3B%3B%3B%3BAAKD%2CKAAM%2CKAAI%3BEACN%2CeAAA%3BEACA%2CcAAA%3B%3B%3B%3BAAIJ%2CMAAM%3BEACL%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CYAAA%3B%3BAAED%2CMAAM%2CWAAY%3BEACjB%2CgBAAA%3B%3BAAED%2CMAAM%2CWAAY%3BEACjB%2C2BAAA%3BEACA%2C8BAAA%3BEACA%2CsBAAA%3BEACA%2CWAAA%3BEACA%2CiBAAA%3BEACA%2CUAAA%3B%3BAAED%2CMAAM%2CWAAY%2CGAAE%2CUAAU%3BEAC7B%2CeAAA%3B%3BAAED%2CMAAM%2CWAAY%3BEACjB%2CcAAA%3BEACA%2CWAAA%3B%3B%3B%3BAAID%2CMAAM%2CKAAM%3BEACX%2CeAAA%3BEACA%2CmBAAA%3BEACA%2CkBAAA%3B%3BAAED%2CMAAM%2CKAAM%3BEACX%2CmBAAA%3B%3BAAED%2CMAAM%2CKAAM%2COAAM%3BEACjB%2CmBAAA%3BEACA%2CkBAAA%3B%3BAAED%2CMAAM%2CKAAM%3BEACX%2CcAAA%3BEACA%2CkBAAA%3B%3BAAED%2CMAAM%2CKAAM%2COAAM%2CcAAe%2CMAAK%3BEACrC%2CkBAAA%3BEACA%2CQAAA%3BEACA%2CSAAA%3B%3BAAED%2CMAAM%2CKAAM%2COAAO%2CMAAK%3BAACxB%2CMAAM%2CKAAM%2COAAO%2CMAAK%3BEACvB%2C2BAAA%3BEACA%2C8BAAA%3BEACA%2CsBAAA%3BEACA%2CYAAA%3BEACA%2CYAAA%3BEACA%2CWAAA%3B%3BAAED%2CMAAM%2CKAAM%3BEACX%2C2BAAA%3BEACA%2C8BAAA%3BEACA%2CsBAAA%3BEACA%2CaAAA%3BEACA%2CWAAA%3B%3BAAED%2CMAAM%2CKAAM%2CSAAS%3BEACpB%2CYAAA%3BEACA%2CYAAA%3BEACA%2CiBAAA%3BEACA%2CeAAA%3B%3BAAED%2CMAAM%2CKAAM%2CSAAS%3BEACpB%2CeAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3B%3BAAED%2CMAAM%2CKAAM%3BEACX%2CsBAAA%3BEACA%2CWAAA%3B%3BAAED%2CMAAM%2CKAAM%2COAAO%3BEAClB%2CsBAAA%3B%3BAAED%2CMAAM%2CKAAM%2COAAO%3BEAClB%2CWAAA%3BEACA%2CcAAA%3BEACA%2CYAAA%3BEACA%2CiBAAA%3BEACA%2CkBAAA%3BEACA%2CqBAAA%3B%3BAAED%2CMAAM%2CKAAM%3BEACR%2CcAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2COAAO%3BEACf%2CWAAA%3BEACA%2CyBAAA%3BEACA%2CiBAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2COAAO%2CMAAM%3BAACzB%2CMAAM%2CKAAM%2COAAO%2CMAAM%3BEACrB%2CkBAAA%3BEACA%2CsBAAA%3BEACA%2CmBAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2COAAO%2CMAAM%3BEACrB%2CeAAA%3B%3BAAGJ%2CMAAM%2CKAAM%3BEACR%2CaAAA%3BEACA%2CYAAA%3BEACA%2CsBAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2CeAAe%3BEACvB%2CqBAAA%3BEACA%2CeAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEACA%2CWAAA%3BEACA%2CqBAAA%3BEACA%2C4BAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2CeAAe%2CEAAC%3BEACxB%2CeAAA%3B%3BAAEJ%2CMAAM%2CKAAM%2CeAAc%2COAAQ%3BEAC9B%2CUAAA%3B%3B%3B%3BAAKJ%3BEACI%2CcAAA%3B%3BAAEJ%3BEACI%2CqBAAA%3B%3BAAEJ%2COAAQ%3BEACJ%2CWAAA%3BEACA%2CYAAA%3BEACA%2CsBAAA%3B%3B%3B%3B%3B%3B%3BACrMJ%2CWAAW%3BAACX%2CWAAW%3BAACX%2CYAAY%3BAACZ%2CYAAY%3BEACR%2CkBAAA%3BEACA%2CMAAA%3BEAAQ%2CQAAA%3BEAAU%2CSAAA%3BEAAW%2COAAA%3BEAC7B%2CmBAAA%3BEACA%2CiCAAA%3BEACA%2CqCAAA%3BEACA%2C6BAAA%3B%3BAAIJ%2CWAAW%3BEACP%2CYAAA%3BEACA%2CmBAAmB%2CgBAAnB%3BEACA%2CWAAW%2CgBAAX%3B%3BAAGJ%2CWAAW%2CSAAS%3BEAChB%2CmBAAmB%2CaAAnB%3BEACA%2CWAAW%2CaAAX%3B%3BAAGJ%2CWAAW%3BEACP%2CYAAA%3BEACA%2CmBAAmB%2CaAAnB%3BEACA%2CWAAW%2CaAAX%3B%3BAAGJ%2CWAAW%2CSAAS%3BEAChB%2CmBAAmB%2CiBAAnB%3BEACA%2CWAAW%2CiBAAX%3B%3BAAGJ%2CYAAY%3BEACR%2CYAAA%3BEACA%2CmBAAmB%2CiBAAnB%3BEACA%2CWAAW%2CiBAAX%3B%3BAAGJ%2CYAAY%2CSAAS%3BEACjB%2CmBAAmB%2CaAAnB%3BEACA%2CWAAW%2CaAAX%3B%3BAAGJ%2CYAAY%3BEACR%2CYAAA%3BEACA%2CmBAAmB%2CaAAnB%3BEACA%2CWAAW%2CaAAX%3B%3BAAGJ%2CYAAY%2CSAAS%3BEACjB%2CmBAAmB%2CgBAAnB%3BEACA%2CWAAW%2CgBAAX%3B%3B%3B%3B%3B%3B%3BACtDJ%3BEACI%2CwBAAA%3B%3BAAGJ%3BEACI%2CUAAA%22%7D */
