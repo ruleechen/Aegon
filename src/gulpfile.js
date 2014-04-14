@@ -68,11 +68,8 @@ gulp.task('css-min', function () {
 
 
 // publish
-gulp.task('publish', function () {
-  gulp.run('js');
-  gulp.run('js-min');
-  gulp.run('css');
-  gulp.run('css-min');
+gulp.task('publish', ['js', 'js-min', 'css', 'css-min'], function () {
+  //console.log('publish done')
 });
 
 
