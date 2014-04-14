@@ -13,7 +13,7 @@ var gulp = require('gulp');
     server = lr();
 
 
-// JS
+// js
 gulp.task('js', function(){
   gulp
     .src('js/app.js')
@@ -26,7 +26,7 @@ gulp.task('js', function(){
     .pipe(livereload(server));
 });
 
-// JS MIN
+// js min
 gulp.task('js-min', function () {
   gulp
     .src('js/app.js')
@@ -41,7 +41,7 @@ gulp.task('js-min', function () {
     .pipe(gulp.dest('./dist/js'));
 });
 
-// CSS
+// css
 gulp.task('css', function () {
   gulp
     .src('css/main.less')
@@ -53,7 +53,7 @@ gulp.task('css', function () {
     .pipe(livereload(server));
 });
 
-// CSS MIN
+// css min
 gulp.task('css-min', function () {
   gulp
     .src('css/main.less')
@@ -67,7 +67,7 @@ gulp.task('css-min', function () {
 });
 
 
-// Publish
+// publish
 gulp.task('publish', function () {
   gulp.run('js');
   gulp.run('js-min');
@@ -76,7 +76,7 @@ gulp.task('publish', function () {
 });
 
 
-// Clean
+// clean
 gulp.task('clean', function() {
   gulp.src(['./dist/js/bundle.js',
             './dist/js/bundle.min.js',
@@ -86,7 +86,7 @@ gulp.task('clean', function() {
 });
 
 
-// Watch
+// watch
 gulp.task('watch', function () {
   var paths = {
     scripts: ['js/**/*.js'],
@@ -102,9 +102,10 @@ gulp.task('watch', function () {
 });
 
 
-// Default task
+// default task
 gulp.task('default', ['watch']);
 
-// Run
+
+// run
 gulp.run('js');
 gulp.run('css');
